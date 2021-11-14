@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviFaca_Usuario.Vista.Usuario.EnviarImprevisto"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <!--Utilizamos Grid para definir el diseño, se definen 5 filas y solo una columna -->
+        <ScrollView>
+            <Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" Margin="0,0,0,30">
+                    <Image
+                    Source="logo1"
+                    HeightRequest="150"
+                    WidthRequest="0"
+                    />
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                    <Label Text="¿Hay algùn imprevisto, trancòn o accidente en la ruta?"
+                            TextColor="#306970"
+                            FontSize="16"
+                            WidthRequest="300"
+                            Margin="0,10,0,5"
+                            XAlign="Center"
+                           FontAttributes="Bold"
+                    />
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Margin="0,20,0,30" >
+                    <Label
+                    Text="Reportelo:"
+                    FontSize="13"
+                    TextColor="#666666"
+                    />
+                    <Editor
+                        x:Name="ImprevistoTxt"
+                        Placeholder="Por favor ingrese una descripcion corta de lo que pasa y dònde."
+                        MaxLength="300"
+                        FontSize="15"
+                        TextColor="#306970"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        />
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" Orientation="Vertical" Margin="0,30,0,0">
+                    <Button
+                            Text="Enviar reporte"
+                            Font="Montserrat-Medium.otf"
+                            FontSize="15"
+                            BackgroundColor="#306970"
+                            BorderColor="#306970"
+                            TextColor="#FFFFFF"
+                            BorderWidth="1.5"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            CornerRadius="7"
+                            Clicked="Reporte_Clicked"
+                    />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

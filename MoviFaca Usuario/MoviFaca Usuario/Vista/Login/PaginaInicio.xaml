@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviFaca_Usuario.Vista.Login.PaginaInicio"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <!--Utilizamos Grid para definir el diseño, se definen 3 filas y solo una columna -->
+        <Grid RowSpacing="20">
+            <!--para diseñalo multiplataforma se usa,"{OnPlatform iOS=25,Android=20}", por el momento solo vamos a diseñarlo para Android-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="1">
+                <Image
+                    Source="logoHorizontal" 
+                    HeightRequest="120" 
+                    WidthRequest="0" 
+                    FlexLayout.AlignSelf="Center" 
+                    BackgroundColor="#FFFFFF" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center" Padding="30,50,30,10">
+                <Label
+                    Text="Bienvenido" 
+                    TextColor="#666666"
+                    LineBreakMode="WordWrap"
+                    FontAttributes="Bold"
+                    FontSize="23"
+                    XAlign="Center"
+                    WidthRequest="300" />
+                <!--Font="Montserrat-Medium.otf", definir fondo-->
+                <Label
+                    Text="¿Qué desea hacer?" 
+                    TextColor="#666666"
+                    LineBreakMode="WordWrap"
+                    FontSize="16"
+                    XAlign="Center"
+                    WidthRequest="300" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                <Button
+                    x:Name="btnLogin"
+                    Text="Iniciar Sesión"
+                    TextColor="White"
+                    FontSize="15"
+                    BackgroundColor="#306970"
+                    BorderColor="#306970"
+                    BorderWidth="1.5"
+                    WidthRequest="300"
+                    FlexLayout.AlignSelf="Stretch"
+                    HeightRequest="50"
+                    CornerRadius="4"  
+                    Padding="10,10,10,10"
+                    Clicked="InSesion_Clicked"
+                    />
+                <!--Command="{Binding RegisterCommand}"-->
+                <Button
+                    x:Name="btnLoginInvitado"
+                    Text="Ingrese como invitado"
+                    TextColor="White"
+                    FontSize="15"
+                    BackgroundColor="#306970"
+                    BorderColor="#306970"
+                    BorderWidth="1.5"
+                    WidthRequest="300"
+                    FlexLayout.AlignSelf="Stretch"
+                    HeightRequest="50"
+                    CornerRadius="4"  
+                    Padding="10,10,10,10"
+                    />
+                <!--Command="{Binding RegisterCommand}"-->
+                <Label 
+                    Text="o"
+                    Padding="10,0,10,0"
+                    Margin="5" 
+                    HorizontalOptions="Center" 
+                    FontSize="25" 
+                    />
+                <Button
+                    x:Name="btnRegistrase"
+                    Text="Regístrese aquí"
+                    TextColor="White"
+                    FontSize="15"
+                    BackgroundColor="#6AB49D"
+                    BorderColor="#6AB49D"
+                    BorderWidth="1.5"
+                    WidthRequest="300"
+                    FlexLayout.AlignSelf="Stretch"
+                    HeightRequest="50"
+                    CornerRadius="4"  
+                    Padding="10,10,10,10"
+                    Clicked="Registro_Clicked"
+                    />
+                <!--Command="{Binding RegisterCommand}"-->
+            </StackLayout>
+            <StackLayout Grid.Row="4" HorizontalOptions="Center" Padding="30,90,30,0">
+                <Label
+                    Text="MoviFaca es una aplicación movil que le ayudará a ahorrar tiempo a la hora de transportarse." 
+                    TextColor="#666666"
+                    LineBreakMode="WordWrap"
+                    FontSize="14"
+                    XAlign="Center"
+                    WidthRequest="300" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
